@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+#include <unistd.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -75,5 +76,6 @@ void addnode_fns(stack_t **head, int n);
 void add_queue(stack_t **head, int n);
 void queue_fns(stack_t **head, unsigned int counter);
 void stack_fns(stack_t **head, unsigned int counter);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
 #endif
